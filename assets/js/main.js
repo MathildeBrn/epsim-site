@@ -180,4 +180,26 @@
       iframe.focus();
     });
   }
+
+  /* -------------------------------------------------------------------------
+     7. Bandeau d'information cookies. Purement informatif — ce site ne dépose
+        aucun cookie de mesure d'audience ni de publicité, il n'y a donc rien
+        à faire accepter ou refuser. Affiché une fois, puis mémorisé.
+     ------------------------------------------------------------------------- */
+  var bandeauCookies = document.getElementById('info-cookies');
+
+  if (bandeauCookies) {
+    var CLE_INFO_COOKIES = 'epsim-info-cookies-vue';
+    var dejaVu = false;
+    try { dejaVu = !!window.localStorage && !!localStorage.getItem(CLE_INFO_COOKIES); } catch (e) {}
+
+    if (!dejaVu) {
+      bandeauCookies.hidden = false;
+    }
+
+    document.getElementById('fermer-info-cookies').addEventListener('click', function () {
+      bandeauCookies.hidden = true;
+      try { localStorage.setItem(CLE_INFO_COOKIES, '1'); } catch (e) {}
+    });
+  }
 })();
