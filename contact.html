@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Amélioration progressive. Cette classe active les états qui dépendent du
+     JavaScript (en-tête au défilement, révélations). Sans elle, le contenu reste
+     entièrement visible : une page ne peut jamais rester blanche si le script ne
+     se charge pas. Le délai de sécurité la retire si main.js ne s'est pas exécuté. -->
+<script>
+  document.documentElement.classList.add("js");
+  setTimeout(function () {
+    if (!window.__epsim) document.documentElement.classList.remove("js");
+  }, 2000);
+</script>
+
+<title>Contact — Conseil en immobilier d'entreprise à Paris | EPSIM</title>
+<meta name="description" content="Contactez EPSIM pour un premier échange confidentiel sur votre projet de bureaux à Paris : adresse, téléphone et email.">
+<link rel="canonical" href="https://www.epsim.fr/contact.html">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#063052">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="EPSIM">
+<meta property="og:title" content="Contact — Conseil en immobilier d'entreprise à Paris | EPSIM">
+<meta property="og:description" content="Contactez EPSIM pour un premier échange confidentiel sur votre projet de bureaux à Paris : adresse, téléphone et email.">
+<meta property="og:url" content="https://www.epsim.fr/contact.html">
+<meta property="og:image" content="https://www.epsim.fr/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="assets/fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plex-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.epsim.fr/" },
+    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.epsim.fr/contact.html" }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a href="#contenu" class="btn-primary sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[70]">Aller au contenu principal</a>
+
+<header class="site-header on-navy" id="site-header">
+  <div class="page flex items-center justify-between" style="height:var(--header)">
+    <a href="index.html" class="header-link flex min-h-[44px] items-center" aria-label="EPSIM — retour à l'accueil">
+      <img src="assets/img/logo-epsim-blanc.svg" alt="EPSIM — immobilier d'entreprise" width="443" height="261" class="logo-white h-9 w-auto md:h-11 lg:h-12">
+      <img src="assets/img/logo-epsim.svg" alt="" aria-hidden="true" width="443" height="261" class="logo-color h-9 w-auto md:h-11 lg:h-12">
+    </a>
+
+    <nav class="hidden lg:block" aria-label="Navigation principale">
+      <ul class="flex items-center gap-10">
+        <li><a href="index.html" class="nav-link header-link">Accueil</a></li>
+        <li><a href="services.html" class="nav-link header-link">Nos services</a></li>
+        <li><a href="references.html" class="nav-link header-link">Références</a></li>
+        <li><a href="contact.html" class="header-cta" aria-current="page">Nous contacter</a></li>
+      </ul>
+    </nav>
+
+    <button type="button" id="menu-toggle" class="header-link -mr-2 inline-flex h-12 w-12 items-center justify-center lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="sr-only">Ouvrir le menu</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu on-navy" id="mobile-menu" hidden>
+  <div class="page flex items-center justify-between" style="height:var(--header)">
+    <img src="assets/img/logo-epsim-blanc.svg" alt="EPSIM" width="443" height="261" class="h-9 w-auto md:h-11">
+    <button type="button" id="menu-close" class="-mr-2 inline-flex h-12 w-12 items-center justify-center text-white">
+      <span class="sr-only">Fermer le menu</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav class="page mt-6" aria-label="Navigation mobile">
+    <ul>
+      <li><a href="index.html" class="mobile-menu-link">Accueil</a></li>
+      <li><a href="services.html" class="mobile-menu-link">Nos services</a></li>
+      <li><a href="references.html" class="mobile-menu-link">Références</a></li>
+      <li><a href="contact.html" class="mobile-menu-link" aria-current="page">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn-outline mt-10 w-full">Premier échange confidentiel</a>
+  </nav>
+</div>
+
+<main id="contenu">
+
+  <section class="relative bg-white">
+    <div class="absolute right-0 bottom-0 hidden rounded-r-2xl shadow-xl lg:block" style="top:var(--header);left:var(--split)">
+      <div class="h-full w-full overflow-hidden rounded-r-2xl">
+        <picture class="contents">
+          <source type="image/webp" srcset="assets/img/bandeau-contact-640.webp 640w, assets/img/bandeau-contact-960.webp 960w, assets/img/bandeau-contact-1280.webp 1280w, assets/img/bandeau-contact-1600.webp 1600w" sizes="(min-width:1280px) 40vw, (min-width:1024px) 32vw, 100vw">
+          <img src="assets/img/bandeau-contact.jpg" srcset="assets/img/bandeau-contact-640.jpg 640w, assets/img/bandeau-contact-960.jpg 960w, assets/img/bandeau-contact-1280.jpg 1280w, assets/img/bandeau-contact-1600.jpg 1600w" sizes="(min-width:1280px) 40vw, (min-width:1024px) 32vw, 100vw" alt="Façade haussmannienne parisienne : porte cochère en bois sombre à deux battants, ornée de médaillons dorés et surmontée d'une imposte cintrée en ferronnerie, encadrée de troncs de platanes." class="h-full w-full animate-ken-burns object-cover">
+        </picture>
+      </div>
+    </div>
+    <span class="slot-navy hidden lg:block" style="top:var(--header);left:calc(var(--split) - var(--rsv))" aria-hidden="true"></span>
+
+    <div style="width:var(--split)">
+      <div class="volume-inner reveal-group" data-reveal-step="80" style="padding-top:calc(var(--header) + 3.5rem);padding-bottom:10rem">
+        <p class="section-label reveal"><span class="marker" aria-hidden="true"></span><span class="eyebrow">Contact</span></p>
+        <h1 class="reveal mt-7 font-display text-hero">Un premier échange confidentiel.</h1>
+        <p class="reveal mt-7 lead">Vous recherchez des bureaux à Paris ou souhaitez céder un actif professionnel&nbsp;: contactez-nous pour un premier échange confidentiel.</p>
+      </div>
+    </div>
+
+    <div class="rounded-2xl shadow-xl lg:hidden">
+      <div class="h-56 w-full overflow-hidden rounded-2xl sm:h-72">
+        <picture class="contents">
+          <source type="image/webp" srcset="assets/img/bandeau-contact-640.webp 640w, assets/img/bandeau-contact-960.webp 960w, assets/img/bandeau-contact-1280.webp 1280w, assets/img/bandeau-contact-1600.webp 1600w" sizes="(min-width:1280px) 40vw, (min-width:1024px) 32vw, 100vw">
+          <img src="assets/img/bandeau-contact.jpg" srcset="assets/img/bandeau-contact-640.jpg 640w, assets/img/bandeau-contact-960.jpg 960w, assets/img/bandeau-contact-1280.jpg 1280w, assets/img/bandeau-contact-1600.jpg 1600w" sizes="(min-width:1280px) 40vw, (min-width:1024px) 32vw, 100vw" alt="Façade haussmannienne parisienne : porte cochère en bois sombre à deux battants, ornée de médaillons dorés et surmontée d'une imposte cintrée en ferronnerie, encadrée de troncs de platanes." class="h-full w-full animate-ken-burns object-cover">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- Le formulaire de contact a été supprimé définitivement : le cabinet se
+       joint par téléphone, par email et sur rendez-vous. Il n'y a donc plus
+       aucune collecte de données par ce site — c'est ce que décrit la rubrique
+       « Données personnelles » des mentions légales, qu'il faut tenir à jour si
+       un formulaire venait à être réintroduit.
+
+       Deux colonnes, comme « Pourquoi choisir EPSIM » sur l'accueil : titre et
+       intro à gauche, coordonnées en regard à droite. Pas de réserve sur fond
+       blanc — elle n'a de sens que creusée dans un aplat bleu. Pas de bordures
+       horizontales non plus : l'écart entre les lignes suffit. -->
+  <section class="bg-white section-rythme-court" aria-labelledby="titre-contact">
+    <div class="page">
+      <div class="grid grid-cols-1 gap-12 lecture:grid-cols-12 lecture:gap-16">
+        <div class="lecture:col-span-4">
+          <div class="lecture:sticky lecture:top-32">
+            <p class="section-label reveal"><span class="marker" aria-hidden="true"></span><span class="eyebrow">Coordonnées</span></p>
+            <h2 id="titre-contact" class="reveal mt-7 font-display text-h2">Nous joindre directement</h2>
+            <p class="reveal mt-6 prose-epsim">Le cabinet répond par téléphone et par email, et reçoit sur rendez-vous. Un premier échange suffit à cadrer votre besoin, sans engagement.</p>
+          </div>
+        </div>
+
+        <div class="lecture:col-span-8">
+          <dl class="reveal-group">
+            <div class="reveal ligne-liste grid grid-cols-1 gap-x-10 gap-y-2 md:grid-cols-12">
+              <dt class="eyebrow pt-2 md:col-span-4">Adresse</dt>
+              <!-- À COMPLÉTER : adresse postale du cabinet -->
+              <dd class="max-w-measure text-lead text-ink md:col-span-8">100 rue de Saussure<br>75017 Paris</dd>
+            </div>
+            <div class="reveal ligne-liste grid grid-cols-1 gap-x-10 gap-y-2 md:grid-cols-12">
+              <dt class="eyebrow pt-2 md:col-span-4">Téléphone</dt>
+              <dd class="text-lead md:col-span-8"><a href="tel:+33142120404" class="link inline-flex min-h-[44px] items-center">01 42 12 04 04</a></dd>
+            </div>
+            <div class="reveal ligne-liste grid grid-cols-1 gap-x-10 gap-y-2 md:grid-cols-12">
+              <dt class="eyebrow pt-2 md:col-span-4">Email</dt>
+              <!-- À COMPLÉTER : adresse email -->
+              <dd class="text-lead md:col-span-8"><a href="mailto:contact@epsim.fr" class="link inline-flex min-h-[44px] items-center">contact@epsim.fr</a></dd>
+            </div>
+            <div class="reveal ligne-liste grid grid-cols-1 gap-x-10 gap-y-2 md:grid-cols-12">
+              <dt class="eyebrow pt-2 md:col-span-4">Horaires</dt>
+              <dd class="max-w-measure text-lead text-ink md:col-span-8">Du lundi au vendredi, 9h – 19h<br><span class="text-ink-soft">Rendez-vous en dehors de ces horaires sur demande.</span></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CARTE ======================= -->
+  <section class="bg-white section-rythme-b" aria-labelledby="titre-carte">
+    <div class="page">
+      <div class="max-w-3xl">
+        <p class="section-label reveal"><span class="marker" aria-hidden="true"></span><span class="eyebrow">Localisation</span></p>
+        <h2 id="titre-carte" class="reveal mt-7 font-display text-h2">Nous rendre visite</h2>
+        <p class="reveal mt-6 prose-epsim">Le cabinet reçoit sur rendez-vous. La carte est chargée uniquement à votre demande : aucune donnée n'est transmise à Google avant votre clic.</p>
+      </div>
+    </div>
+
+    <!-- Carte différée, adresse réelle du siège. L'URL « output=embed » est
+         l'embed public de Google Maps : elle ne demande aucune clé d'API. -->
+    <div class="mt-12 v-91">
+      <div id="carte-zone" class="reveal reveal-flat on-navy relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-navy md:aspect-[21/9]"
+           data-carte-src="https://www.google.com/maps?q=100+rue+de+Saussure%2C+75017+Paris&z=16&output=embed">
+        <img src="assets/img/placeholders/carte-substitution.svg" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover opacity-20">
+        <div class="absolute inset-0 flex flex-col items-center justify-center gap-6 p-6 text-center">
+          <p class="max-w-md bg-navy px-5 py-3 text-sm text-white">La carte est fournie par Google Maps. Son affichage entraîne une connexion aux serveurs de Google.</p>
+          <button type="button" id="carte-charger" class="btn-light">Afficher la carte</button>
+          <noscript><a href="https://www.google.com/maps?q=100+rue+de+Saussure%2C+75017+Paris" class="btn-light" target="_blank" rel="noopener">Ouvrir dans Google Maps</a></noscript>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="relative bg-navy on-navy pb-10 pt-16 md:pt-20" aria-labelledby="titre-pied">
+  <h2 id="titre-pied" class="sr-only">Informations sur le cabinet</h2>
+
+  <!-- La réserve : une seule fente, entre la colonne de marque et le reste. -->
+  <span class="slot-accent hidden lg:block" style="left:25%" aria-hidden="true"></span>
+
+  <div class="page">
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-14">
+      <div class="lg:pr-14">
+        <img src="assets/img/logo-epsim-blanc.svg" alt="EPSIM" width="443" height="261" class="h-14 w-auto">
+        <p class="mt-6 max-w-xs text-sm text-white/70">Cabinet indépendant de conseil en immobilier d'entreprise à Paris.</p>
+      </div>
+
+      <nav aria-label="Navigation de pied de page">
+        <h3 class="eyebrow-white">Navigation</h3>
+        <ul class="mt-5 space-y-2 text-sm text-white/80">
+          <li><a href="index.html" class="inline-flex min-h-[44px] items-center hover:text-white">Accueil</a></li>
+          <li><a href="services.html" class="inline-flex min-h-[44px] items-center hover:text-white">Nos services</a></li>
+          <li><a href="references.html" class="inline-flex min-h-[44px] items-center hover:text-white">Références</a></li>
+          <li><a href="contact.html" class="inline-flex min-h-[44px] items-center hover:text-white">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h3 class="eyebrow-white">Contact</h3>
+        <ul class="mt-5 space-y-3 text-sm text-white/80">
+          <li class="flex gap-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mt-0.5 shrink-0 text-white/55" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <!-- À COMPLÉTER : adresse postale du cabinet -->
+            <span>100 rue de Saussure<br>75017 Paris</span>
+          </li>
+          <li class="flex gap-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mt-0.5 shrink-0 text-white/55" aria-hidden="true"><path d="M4 5h5l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v5a15 15 0 0 1-16-16z"/></svg>
+            <a href="tel:+33142120404" class="inline-flex min-h-[44px] items-center hover:text-white">01 42 12 04 04</a>
+          </li>
+          <li class="flex gap-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mt-0.5 shrink-0 text-white/55" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg>
+            <!-- À COMPLÉTER : adresse email -->
+            <a href="mailto:contact@epsim.fr" class="inline-flex min-h-[44px] items-center hover:text-white">contact@epsim.fr</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="eyebrow-white">Zone d'intervention</h3>
+        <p class="mt-5 text-sm text-white/80">Paris et première couronne Ouest : Neuilly-sur-Seine, Levallois-Perret, Boulogne-Billancourt.</p>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-col gap-4 border-t border-white/20 pt-8 text-sm text-white/65 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span data-annee>2026</span> EPSIM. Tous droits réservés.</p>
+      <a href="mentions-legales.html" class="inline-flex min-h-[44px] items-center hover:text-white">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

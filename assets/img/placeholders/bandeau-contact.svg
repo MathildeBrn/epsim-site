@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2000" width="1600" height="2000" role="img" aria-label="Placeholder : Bandeau — Contact">
+  <rect width="1600" height="2000" fill="#DCE5EC"/>
+  <rect x="80" y="80" width="1440" height="1840" fill="none" stroke="#9FB4C6" stroke-width="3"/>
+  <rect x="730.7" y="728" width="139" height="7" fill="#0081C5"/>
+  <g font-family="IBM Plex Sans, Helvetica, Arial, sans-serif" text-anchor="middle" fill="#063052">
+    <text x="800" y="920" font-size="77" font-weight="600" letter-spacing="10.01">PHOTO À FOURNIR</text>
+    <text x="800" y="1080" font-size="53" font-weight="500" fill="#3F6B8C">Bandeau — Contact</text>
+    <text x="800" y="1208" font-size="45" fill="#6E8CA6">1600 × 2000 px  —  bandeau-contact.jpg</text>
+  </g>
+</svg>

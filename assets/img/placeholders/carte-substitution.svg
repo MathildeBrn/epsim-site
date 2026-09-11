@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-label="Placeholder : Visuel de substitution — carte">
+  <rect width="1600" height="700" fill="#DCE5EC"/>
+  <rect x="35" y="35" width="1530" height="630" fill="none" stroke="#9FB4C6" stroke-width="2"/>
+  <rect x="769.4" y="231" width="61" height="3" fill="#0081C5"/>
+  <g font-family="IBM Plex Sans, Helvetica, Arial, sans-serif" text-anchor="middle" fill="#063052">
+    <text x="800" y="315" font-size="34" font-weight="600" letter-spacing="4.42">PHOTO À FOURNIR</text>
+    <text x="800" y="385" font-size="23" font-weight="500" fill="#3F6B8C">Visuel de substitution — carte</text>
+    <text x="800" y="441" font-size="20" fill="#6E8CA6">1600 × 700 px  —  carte-substitution.jpg</text>
+  </g>
+</svg>

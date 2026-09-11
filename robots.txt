@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# REMPLACER le domaine par le domaine réel avant la mise en ligne.
+Sitemap: https://www.epsim.fr/sitemap.xml

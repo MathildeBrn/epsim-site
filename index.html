@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Amélioration progressive. Cette classe active les états qui dépendent du
+     JavaScript (en-tête au défilement, révélations). Sans elle, le contenu reste
+     entièrement visible : une page ne peut jamais rester blanche si le script ne
+     se charge pas. Le délai de sécurité la retire si main.js ne s'est pas exécuté. -->
+<script>
+  document.documentElement.classList.add("js");
+  setTimeout(function () {
+    if (!window.__epsim) document.documentElement.classList.remove("js");
+  }, 2000);
+</script>
+
+<title>Immobilier d'entreprise à Paris — Conseil en bureaux | EPSIM</title>
+<meta name="description" content="Cabinet indépendant de conseil en immobilier d'entreprise à Paris depuis plus de 40 ans : achat, vente et location de bureaux et locaux professionnels.">
+<link rel="canonical" href="https://www.epsim.fr/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#063052">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="EPSIM">
+<meta property="og:title" content="Immobilier d'entreprise à Paris — Conseil en bureaux | EPSIM">
+<meta property="og:description" content="Cabinet indépendant de conseil en immobilier d'entreprise à Paris depuis plus de 40 ans : achat, vente et location de bureaux et locaux professionnels.">
+<meta property="og:url" content="https://www.epsim.fr/">
+<meta property="og:image" content="https://www.epsim.fr/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="assets/fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plex-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<!-- Préchargement du hero. Il vise le jeu WebP et déclare les mêmes `imagesizes`
+     que le <picture> : sans cela le navigateur préchargerait une largeur, puis
+     en choisirait une autre à la mise en page, et téléchargerait deux fois.
+     Les navigateurs sans WebP ignorent la balise et suivent le repli du <img>. -->
+<link rel="preload" as="image" type="image/webp" fetchpriority="high"
+      imagesrcset="assets/img/hero-accueil-640.webp 640w, assets/img/hero-accueil-960.webp 960w, assets/img/hero-accueil-1280.webp 1280w, assets/img/hero-accueil-1600.webp 1600w"
+      imagesizes="(min-width:1280px) 40vw, (min-width:1024px) 32vw, 100vw">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<!-- DONNÉES STRUCTURÉES — deux réserves avant la mise en ligne :
+
+     1. "geo" a été RETIRÉ. Il portait 48.8566 / 2.3522, soit l'Île de la Cité,
+        à plus de trois kilomètres du siège réel. Des coordonnées fausses
+        déplacent silencieusement le cabinet sur les cartes des moteurs : mieux
+        vaut aucune coordonnée qu'une mauvaise. Relever les coordonnées exactes
+        du 100 rue de Saussure et rétablir le bloc :
+            "geo": { "@type": "GeoCoordinates", "latitude": …, "longitude": … },
+
+     2. "telephone" est désormais le vrai numéro du cabinet. "email" ci-dessous
+        reste une valeur d'attente, à remplacer en même temps que les XXX
+        correspondants de mentions-legales.html. Publier une adresse fictive
+        dans des données structurées est pire que ne rien publier : la
+        supprimer si la vraie n'est pas connue au moment de la mise en ligne. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://www.epsim.fr/#cabinet",
+  "name": "EPSIM",
+  "legalName": "EPSIM SARL",
+  "description": "Cabinet indépendant de conseil en immobilier d'entreprise à Paris. Achat, vente, location et investissement de bureaux et locaux professionnels.",
+  "url": "https://www.epsim.fr/",
+  "logo": "https://www.epsim.fr/assets/img/logo-epsim.svg",
+  "vatID": "FR92493604250",
+  "telephone": "+33142120404",
+  "email": "contact@epsim.fr",
+  "priceRange": "$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "100 rue de Saussure",
+    "postalCode": "75017",
+    "addressLocality": "Paris",
+    "addressCountry": "FR"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Paris" },
+    { "@type": "City", "name": "Neuilly-sur-Seine" },
+    { "@type": "City", "name": "Levallois-Perret" },
+    { "@type": "City", "name": "Boulogne-Billancourt" }
+  ],
+  "knowsAbout": ["Immobilier d'entreprise", "Bureaux Paris", "Locaux professionnels", "Investissement immobilier tertiaire"],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "19:00"
+  }
+}
+</script>
+</head>
+
+<body>
+<a href="#contenu" class="btn-primary sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-[70]">Aller au contenu principal</a>
+
+<header class="site-header on-navy" id="site-header">
+  <div class="page flex items-center justify-between" style="height:var(--header)">
+    <a href="index.html" class="header-link flex min-h-[44px] items-center" aria-label="EPSIM — retour à l'accueil">
+      <img src="assets/img/logo-epsim-blanc.svg" alt="EPSIM — immobilier d'entreprise" width="443" height="261" class="logo-white h-9 w-auto md:h-11 lg:h-12">
+      <img src="assets/img/logo-epsim.svg" alt="" aria-hidden="true" width="443" height="261" class="logo-color h-9 w-auto md:h-11 lg:h-12">
+    </a>
+
+    <nav class="hidden lg:block" aria-label="Navigation principale">
+      <ul class="flex items-center gap-10">
+        <li><a href="index.html" class="nav-link header-link" aria-current="page">Accueil</a></li>
+        <li><a href="services.html" class="nav-link header-link">Nos services</a></li>
+        <li><a href="references.html" class="nav-link header-link">Références</a></li>
+        <li><a href="contact.html" class="header-cta">Nous contacter</a></li>
+      </ul>
+    </nav>
+
+    <button type="button" id="menu-toggle" class="header-link -mr-2 inline-flex h-12 w-12 items-center justify-center lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="sr-only">Ouvrir le menu</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu on-navy" id="mobile-menu" hidden>
+  <div class="page flex items-center justify-between" style="height:var(--header)">
+    <img src="assets/img/logo-epsim-blanc.svg" alt="EPSIM" width="443" height="261" class="h-9 w-auto md:h-11">
+    <button type="button" id="menu-close" class="-mr-2 inline-flex h-12 w-12 items-center justify-center text-white">
+      <span class="sr-only">Fermer le menu</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav class="page mt-6" aria-label="Navigation mobile">
+    <ul>
+      <li><a href="index.html" class="mobile-menu-link" aria-current="page">Accueil</a></li>
+      <li><a href="services.html" class="mobile-menu-link">Nos services</a></li>
+      <li><a href="references.html" class="mobile-menu-link">Références</a></li>
+      <li><a href="contact.html" class="mobile-menu-link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn-outline mt-10 w-full">Premier échange confidentiel</a>
+  </nav>
+</div>
+
+<main id="contenu">
+
+  <!-- ======================= HERO =======================
+       Aucun voile : le texte est posé sur un fond blanc plein, la
+       photographie reste à pleine lumière à droite, et la réserve — ici en
+       plein bleu — sépare les deux. -->
+  <section class="relative bg-white">
+    <!-- Ombre sur ce conteneur, overflow-hidden sur celui du dessous : un
+         box-shadow posé sur un élément qui masque lui-même son propre
+         débordement se retrouve coupé net sur les bords qui débordent. Deux
+         boîtes séparées, chacune sa responsabilité.
+
+         Arrondi À DROITE SEULEMENT : à gauche, la photo touche la réserve
+         (slot-navy) sans le moindre interstice. Un rayon des deux côtés
+         laisserait passer un triangle de blanc entre la courbe et le bord
+         droit du slot, qui lui reste franc. -->
+    <div class="absolute right-0 bottom-0 hidden rounded-r-2xl shadow-xl lg:block" style="top:var(--header);left:var(--split)">
+      <div class="h-full w-full overflow-hidden rounded-r-2xl">
+        <picture class="contents">
+          <source type="image/webp" srcset="assets/img/hero-accueil-640.webp 640w, assets/img/hero-accueil-960.webp 960w, assets/img/hero-accueil-1280.webp 1280w, assets/img/hero-accueil-1600.webp 1600w" sizes="(min-width:1280px) 40vw, (min-width:1024px) 32vw, 100vw">
+          <img src="assets/img/hero-accueil.jpg" srcset="assets/img/hero-accueil-640.jpg 640w, assets/img/hero-accueil-960.jpg 960w, assets/img/hero-accueil-1280.jpg 1280w, assets/img/hero-accueil-1600.jpg 1600w" sizes="(min-width:1280px) 40vw, (min-width:1024px) 32vw, 100vw" alt="" aria-hidden="true" class="h-full w-full animate-ken-burns object-cover" fetchpriority="high">
+        </picture>
+      </div>
+    </div>
+    <span class="slot-navy hidden lg:block" style="top:var(--header);left:calc(var(--split) - var(--rsv))" aria-hidden="true"></span>
+
+    <div style="width:var(--split)">
+      <div class="volume-inner reveal-group" data-reveal-step="80" style="padding-top:calc(var(--header) + 4rem);padding-bottom:10rem">
+        <p class="section-label reveal"><span class="marker" aria-hidden="true"></span><span class="eyebrow">Cabinet de conseil indépendant — Paris</span></p>
+        <h1 class="reveal mt-7 font-display text-hero">
+          L'immobilier d'entreprise à Paris, avec un accompagnement indépendant depuis plus de 40 ans.
+        </h1>
+        <p class="reveal mt-7 lead">
+          Achat, vente, location et investissement de bureaux et locaux professionnels à Paris et en première couronne Ouest.
+        </p>
+        <div class="reveal mt-10 flex flex-col gap-4 sm:flex-row">
+          <a href="contact.html" class="btn-primary">Nous contacter</a>
+          <a href="services.html" class="btn-ghost">Découvrir nos services</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-2xl shadow-xl lg:hidden">
+      <div class="h-64 w-full overflow-hidden rounded-2xl sm:h-80">
+        <picture class="contents">
+          <source type="image/webp" srcset="assets/img/hero-accueil-640.webp 640w, assets/img/hero-accueil-960.webp 960w, assets/img/hero-accueil-1280.webp 1280w, assets/img/hero-accueil-1600.webp 1600w" sizes="(min-width:1280px) 40vw, (min-width:1024px) 32vw, 100vw">
+          <img src="assets/img/hero-accueil.jpg" srcset="assets/img/hero-accueil-640.jpg 640w, assets/img/hero-accueil-960.jpg 960w, assets/img/hero-accueil-1280.jpg 1280w, assets/img/hero-accueil-1600.jpg 1600w" sizes="(min-width:1280px) 40vw, (min-width:1024px) 32vw, 100vw" alt="" aria-hidden="true" class="h-full w-full animate-ken-burns object-cover">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= TROIS MÉTIERS =======================
+       Trois aplats bleus séparés par la réserve : la fente est ici le
+       joint entre les volumes. Elle pivote d'elle-même à l'horizontale
+       sous 1024 px, puisqu'elle n'est rien d'autre que l'écart de la grille. -->
+  <section class="bg-white section-rythme-b" aria-labelledby="titre-metiers">
+    <div class="page">
+      <div class="max-w-3xl">
+        <p class="section-label reveal"><span class="marker" aria-hidden="true"></span><span class="eyebrow">Nos interventions</span></p>
+        <h2 id="titre-metiers" class="reveal mt-7 font-display text-h2">Trois natures de mission, un seul interlocuteur.</h2>
+      </div>
+    </div>
+
+    <!-- Deuxième gradin : 83 %. Le bord droit du troisième volume gris tombe à
+         83 % de la page et se détache sur le blanc — c'est lui qui rend la
+         marche visible. La largeur passe par .v-83 plutôt que par un style
+         inline, pour que tous les gradins se lisent dans la même grammaire. -->
+    <div class="v-83 mt-16 bg-white">
+      <div class="reveal-group grid grid-cols-1 bg-white xl:grid-cols-3" data-reveal-step="80" style="gap:var(--rsv)">
+        <article class="reveal gutter-l rounded-xl bg-surface py-12 pr-6 md:pr-7 lg:py-14 lg:pr-7">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" class="text-accent" aria-hidden="true">
+            <path d="M3 21h18M5 21V7l7-4 7 4v14M10 21v-5h4v5M9 11h1M14 11h1"/>
+          </svg>
+          <h3 class="mt-6 text-h3">Acheter</h3>
+          <p class="mt-4 max-w-measure text-ink-soft">Accompagnement des investisseurs, des utilisateurs et des professions libérales, de la définition du besoin à la signature de l'acte définitif.</p>
+        </article>
+
+        <article class="reveal rounded-xl bg-surface px-6 py-12 md:px-7 lg:py-14">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" class="text-accent" aria-hidden="true">
+            <path d="M3 4h18v16H3zM3 10h18M11 10v10"/>
+          </svg>
+          <h3 class="mt-6 text-h3">Louer</h3>
+          <p class="mt-4 max-w-measure text-ink-soft">Recherche de bureaux de 50 à 1&nbsp;000&nbsp;m², négociation des conditions locatives et assistance jusqu'à la signature du bail.</p>
+        </article>
+
+        <article class="reveal rounded-xl bg-surface px-6 py-12 md:px-7 lg:py-14">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" class="text-accent" aria-hidden="true">
+            <path d="M6 3h9l4 4v14H6zM15 3v4h4M9 12h7M9 16h7"/>
+          </svg>
+          <h3 class="mt-6 text-h3">Vendre</h3>
+          <p class="mt-4 max-w-measure text-ink-soft">Valorisation des actifs, recherche d'acquéreurs qualifiés, négociation et suivi de la vente jusqu'à son terme.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="page">
+      <p class="reveal mt-12">
+        <a href="services.html" class="link-arrow group">
+          <span class="link-arrow-label">Le détail de nos services</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================= POURQUOI EPSIM =======================
+       Deux colonnes : le titre et l'intro tiennent à gauche, en position
+       collante, les cinq arguments défilent à droite. La donnée en display
+       accent fait office de repère, l'argument se lit en regard.
+
+       Aucun marqueur 01–05 : ces cinq arguments ne forment pas une séquence.
+       Chacun est introduit par la donnée concrète sur laquelle il repose.
+
+       Pas de réserve ici. La réserve est une fente CLAIRE creusée dans un aplat
+       bleu — c'est le vide du logo. Sur fond blanc elle s'inverserait en barre
+       bleue pleine, ce qui ne renvoie plus au logo et se lit comme un défaut de
+       mise en page. Elle est donc réservée aux sections à fond bleu.
+
+       Les bordures horizontales ont été retirées : le motif « lignes de tableau »
+       datait la page. Rien ne les remplace, l'écart entre les lignes suffit à
+       les séparer. -->
+  <section class="bg-white section-rythme-court" aria-labelledby="titre-pourquoi">
+    <div class="page">
+      <div class="grid grid-cols-1 gap-12 lecture:grid-cols-12 lecture:gap-16">
+        <div class="lecture:col-span-5">
+          <div class="lecture:sticky lecture:top-32">
+            <p class="section-label reveal"><span class="marker" aria-hidden="true"></span><span class="eyebrow">Notre différence</span></p>
+            <h2 id="titre-pourquoi" class="reveal mt-7 font-display text-h2">Pourquoi choisir EPSIM</h2>
+            <p class="reveal mt-6 prose-epsim">Un cabinet indépendant, sans mandat exclusif imposé et sans intermédiaire : la même personne suit votre dossier du premier rendez-vous jusqu'à la signature.</p>
+          </div>
+        </div>
+
+        <div class="lecture:col-span-7">
+          <ul class="reveal-group">
+            <li class="reveal ligne-liste grid grid-cols-1 gap-x-8 gap-y-3 md:grid-cols-12">
+              <p class="data md:col-span-4" aria-hidden="true">40 ans</p>
+              <div class="md:col-span-8">
+                <h3 class="text-h3">Plus de 40 ans d'expérience</h3>
+                <p class="mt-3 max-w-measure text-ink-soft">Quatre décennies de transactions sur le marché tertiaire parisien, à travers plusieurs cycles de marché.</p>
+              </div>
+            </li>
+            <li class="reveal ligne-liste grid grid-cols-1 gap-x-8 gap-y-3 md:grid-cols-12">
+              <p class="data md:col-span-4" aria-hidden="true">1 seul</p>
+              <div class="md:col-span-8">
+                <h3 class="text-h3">Un interlocuteur unique</h3>
+                <p class="mt-3 max-w-measure text-ink-soft">Aucun transfert de dossier, aucune équipe intermédiaire : votre conseil est celui qui négocie.</p>
+              </div>
+            </li>
+            <li class="reveal ligne-liste grid grid-cols-1 gap-x-8 gap-y-3 md:grid-cols-12">
+              <p class="data md:col-span-4" aria-hidden="true">Rue par rue</p>
+              <div class="md:col-span-8">
+                <h3 class="text-h3">Une connaissance fine du marché parisien</h3>
+                <p class="mt-3 max-w-measure text-ink-soft">Valeurs locatives, mesures d'accompagnement, qualité des immeubles : une lecture précise, rue par rue.</p>
+              </div>
+            </li>
+            <li class="reveal ligne-liste grid grid-cols-1 gap-x-8 gap-y-3 md:grid-cols-12">
+              <p class="data md:col-span-4" aria-hidden="true">Jusqu'à l'acte</p>
+              <div class="md:col-span-8">
+                <h3 class="text-h3">Un accompagnement jusqu'à l'acte définitif</h3>
+                <p class="mt-3 max-w-measure text-ink-soft">Suivi des conditions suspensives et coordination avec les notaires et les conseils jusqu'à la signature.</p>
+              </div>
+            </li>
+            <li class="reveal ligne-liste grid grid-cols-1 gap-x-8 gap-y-3 md:grid-cols-12">
+              <p class="data md:col-span-4" aria-hidden="true">Sans diffusion</p>
+              <div class="md:col-span-8">
+                <h3 class="text-h3">Un réseau d'investisseurs et d'entreprises</h3>
+                <p class="mt-3 max-w-measure text-ink-soft">Un carnet d'adresses constitué sur la durée, mobilisé avec discrétion et sans diffusion publique.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quatrième gradin, et seule inversion de la page : le volume s'ancre à
+       droite à 72 %. C'est le décroché de la façade.
+
+       L'accent en display est ici possible pour la première fois : sur l'ancien
+       #004677 il tombait à 2,31:1, illisible. Sur #063052 il atteint 3,19:1,
+       au-dessus du seuil AA du gros texte. Le titre fait 34 px en mobile et
+       56 px sur grand écran, donc au-delà des 24 px requis dans les deux cas. -->
+  <section class="bg-white section-rythme-b" aria-labelledby="titre-cta">
+    <div class="relative rounded-2xl bg-navy on-navy v-right-72">
+      <span class="slot hidden lg:block" style="left:var(--rsv)" aria-hidden="true"></span>
+      <div class="volume-inner lg:pl-24">
+        <div class="flex flex-col items-start justify-between gap-10 lecture:flex-row lecture:items-end">
+          <div class="max-w-2xl">
+            <h2 id="titre-cta" class="reveal font-display text-h2 text-white">Parlons de votre projet, <span class="text-accent">en toute confidentialité.</span></h2>
+            <p class="reveal mt-5 max-w-measure text-white/80">Un premier échange permet de cadrer votre besoin, sans engagement.</p>
+          </div>
+          <a href="contact.html" class="btn-light reveal shrink-0">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="relative bg-navy on-navy pb-10 pt-16 md:pt-20" aria-labelledby="titre-pied">
+  <h2 id="titre-pied" class="sr-only">Informations sur le cabinet</h2>
+
+  <!-- La réserve : une seule fente, entre la colonne de marque et le reste. -->
+  <span class="slot-accent hidden lg:block" style="left:25%" aria-hidden="true"></span>
+
+  <div class="page">
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-14">
+      <div class="lg:pr-14">
+        <img src="assets/img/logo-epsim-blanc.svg" alt="EPSIM" width="443" height="261" class="h-14 w-auto">
+        <p class="mt-6 max-w-xs text-sm text-white/70">Cabinet indépendant de conseil en immobilier d'entreprise à Paris.</p>
+      </div>
+
+      <nav aria-label="Navigation de pied de page">
+        <h3 class="eyebrow-white">Navigation</h3>
+        <ul class="mt-5 space-y-2 text-sm text-white/80">
+          <li><a href="index.html" class="inline-flex min-h-[44px] items-center hover:text-white">Accueil</a></li>
+          <li><a href="services.html" class="inline-flex min-h-[44px] items-center hover:text-white">Nos services</a></li>
+          <li><a href="references.html" class="inline-flex min-h-[44px] items-center hover:text-white">Références</a></li>
+          <li><a href="contact.html" class="inline-flex min-h-[44px] items-center hover:text-white">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h3 class="eyebrow-white">Contact</h3>
+        <ul class="mt-5 space-y-3 text-sm text-white/80">
+          <li class="flex gap-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mt-0.5 shrink-0 text-white/55" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <!-- À COMPLÉTER : adresse postale du cabinet -->
+            <span>100 rue de Saussure<br>75017 Paris</span>
+          </li>
+          <li class="flex gap-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mt-0.5 shrink-0 text-white/55" aria-hidden="true"><path d="M4 5h5l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v5a15 15 0 0 1-16-16z"/></svg>
+            <a href="tel:+33142120404" class="inline-flex min-h-[44px] items-center hover:text-white">01 42 12 04 04</a>
+          </li>
+          <li class="flex gap-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mt-0.5 shrink-0 text-white/55" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg>
+            <!-- À COMPLÉTER : adresse email -->
+            <a href="mailto:contact@epsim.fr" class="inline-flex min-h-[44px] items-center hover:text-white">contact@epsim.fr</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="eyebrow-white">Zone d'intervention</h3>
+        <p class="mt-5 text-sm text-white/80">Paris et première couronne Ouest : Neuilly-sur-Seine, Levallois-Perret, Boulogne-Billancourt.</p>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-col gap-4 border-t border-white/20 pt-8 text-sm text-white/65 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span data-annee>2026</span> EPSIM. Tous droits réservés.</p>
+      <a href="mentions-legales.html" class="inline-flex min-h-[44px] items-center hover:text-white">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

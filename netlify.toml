@@ -1,0 +1,5 @@
+# Site statique : aucune étape de build côté Netlify. Le CSS compilé
+# (assets/css/styles.css) est déjà généré et versionné dans le dépôt via
+# `npm run build` en local — voir README.md, section « Modifier le style ».
+[build]
+  publish = "."

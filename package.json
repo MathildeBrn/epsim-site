@@ -1,0 +1,16 @@
+{
+  "name": "epsim-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine statique du cabinet EPSIM — conseil en immobilier d'entreprise à Paris.",
+  "scripts": {
+    "build": "tailwindcss -i ./src/tailwind.css -o ./assets/css/styles.css --minify",
+    "dev": "tailwindcss -i ./src/tailwind.css -o ./assets/css/styles.css --watch",
+    "serve": "npx --yes serve@14 .",
+    "images": "node scripts/images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.3",
+    "tailwindcss": "^3.4.17"
+  }
+}

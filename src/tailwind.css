@@ -1,0 +1,442 @@
+/* ---------------------------------------------------------------------------
+   EPSIM — feuille de style source (Tailwind).
+   Ne pas modifier assets/css/styles.css : c'est le fichier compilé.
+   Recompiler avec :  npm run build
+
+   SYSTÈME GRAPHIQUE — « l'élévation et la réserve »
+   Le logo est un volume bleu entaillé d'une réserve verticale. Le site en tire
+   deux règles, appliquées partout :
+
+   1. L'ÉLÉVATION — aucune section n'est pleine largeur par défaut. Chaque aplat
+      est un volume de largeur déclarée (58 %, 83 %, 75 %…). Tous partent du même
+      bord gauche ; seuls les bords droits varient, si bien que la page dessine
+      en descendant un profil en gradins. Une seule inversion, la bande d'appel
+      au contact, ancre le volume à droite : c'est le décroché de la façade.
+
+   2. LA RÉSERVE — une fente verticale de largeur constante (--rsv). Blanche
+      quand elle entaille un aplat bleu (le vide), bleue quand elle marque une
+      section sur fond blanc (le plein). Elle sert de séparateur, de marqueur de
+      titre et de repère de navigation. Sa largeur ne change jamais dans une même
+      page : c'est ce qui la rend reconnaissable.
+   --------------------------------------------------------------------------- */
+
+/* Fontes auto-hébergées : aucune requête vers un domaine tiers. */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/instrument-serif-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/instrument-serif-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/plex-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/plex-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/plex-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/plex-500-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/plex-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/plex-600-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Largeur de la réserve — la constante du système. */
+    --rsv: 10px;
+    --header: 76px;
+    --gutter: 1.5rem;
+    /* Partage aplat bleu / photographie dans les hero et bandeaux. */
+    --split: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header) + 24px);
+  }
+
+  @media (min-width: 768px) {
+    :root { --rsv: 16px; --header: 88px; --gutter: 2.5rem; }
+  }
+
+  /* ORDRE CRITIQUE — ces deux blocs ont la même spécificité, donc le dernier
+     écrit l'emporte quand les deux s'appliquent. Le bloc 1280 doit rester APRÈS
+     le bloc 1024, sans quoi son --split est écrasé et n'a jamais aucun effet :
+     le partage resterait bloqué à 68 % sur tous les grands écrans. */
+  @media (min-width: 1024px) {
+    :root { --rsv: 24px; --header: 96px; --gutter: clamp(3.5rem, 3.9vw, 4.5rem); --split: 68%; }
+  }
+
+  @media (min-width: 1280px) {
+    :root { --split: 60%; }
+  }
+
+  body {
+    @apply bg-white font-sans text-base text-ink antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-navy;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-white;
+  }
+
+  /* Sur aplat bleu, l'anneau d'accent tomberait à 2,31:1 : on passe au blanc. */
+  .on-navy :focus-visible {
+    @apply ring-white ring-offset-navy;
+  }
+
+  ::selection {
+    @apply bg-navy text-white;
+  }
+}
+
+@layer components {
+  /* ---------------------------------------------------------------- structure */
+  /* Gouttière fluide plutôt que conteneur centré : les aplats débordent jusqu'au
+     bord de l'écran, il faut donc que le retrait du texte suive la même loi
+     qu'eux à toute largeur. Sans cela les bords gauches se désalignent dès que
+     la fenêtre dépasse la largeur du conteneur. */
+  .page {
+    @apply mx-auto w-full;
+    max-width: 1920px;
+    padding-inline: var(--gutter);
+  }
+
+  /* Retrait gauche d'un contenu placé dans un aplat qui déborde à gauche. */
+  .gutter-l { padding-left: var(--gutter); }
+  .gutter-r { padding-right: var(--gutter); }
+
+  /* Contenu interne d'un volume : même retrait à gauche que .page, si bien que
+     tous les bords gauches du site restent alignés. Seuls les bords droits
+     varient — c'est ce décalage qui produit l'élévation. */
+  /* 64 / 80 / 96 px — le retrait INTERNE d'un aplat, à ne pas confondre avec
+     le rythme ENTRE les sections (.section-rythme, 160 px). Un aplat compact
+     comme le bandeau d'appel au contact ne porte que 165 px de contenu : à
+     160 px de retrait haut et bas, les deux tiers du bloc étaient vides. Ce
+     n'était plus de la respiration.
+
+     Le hero fait exception : c'est lui qui pousse la section suivante, il
+     surcharge donc son padding-bottom en ligne pour rétablir les 160 px. */
+  .volume-inner {
+    @apply w-full py-16 md:py-20 lg:py-24;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+
+  /* Rythme d'une section sur fond blanc. Même loi que .volume-inner, pour que
+     les sections avec et sans aplat respirent identiquement.
+
+     RÈGLE — le rythme se porte sur le BAS, jamais sur les deux côtés à la fois.
+     Deux sections qui déclareraient chacune 160 px en haut et en bas
+     produiraient 320 px de vide à leur jonction : ce n'est plus de la
+     respiration, c'est un trou. Chaque section pousse la suivante, et la
+     dernière avant le pied de page ferme la marche. .section-rythme n'existe
+     donc que pour une section qui ouvre une page sans hero au-dessus d'elle. */
+  .section-rythme { @apply pt-24 pb-24 md:pt-32 md:pb-32 lg:pt-40 lg:pb-40; }
+  .section-rythme-b { @apply pb-24 md:pb-32 lg:pb-40; }
+
+  /* Rythme raccourci — 64 / 80 / 96 px. À poser sur la section qui PRÉCÈDE un
+     aplat coloré. Sans lui, l'écart entre le dernier texte d'une section et le
+     premier texte de l'aplat suivant cumule deux retraits : les 160 px de blanc
+     de la section, PUIS les 96 px de retrait interne de l'aplat — soit 256 px.
+     Avec, on retombe à 96 + 96 = 192 px.
+     L'aplat n'a pas besoin des 160 px : son changement de couleur sépare déjà. */
+  .section-rythme-court { @apply pb-12 md:pb-16; }
+
+  /* Ligne de liste aérée. Le retrait de la première et de la dernière ligne
+     s'ajouterait à celui de la section : on le neutralise aux extrémités, sans
+     quoi l'écart mesuré entre deux sections gagne 64 px pour rien. */
+  .ligne-liste { @apply py-14 first:pt-0 last:pb-0 md:py-16; }
+
+  /* Les volumes sont gris très clair : le blanc reste dominant et le bleu du
+     logo n'intervient qu'en en-tête, en pied de page, sur les titres et les
+     accents. Seule la bande d'appel au contact reste un aplat bleu plein.
+     Pas de classe .volume : les aplats posent directement `bg-surface` ou
+     `bg-navy` avec leur largeur, ce qui rend la couleur lisible dans le HTML. */
+
+  /* Largeurs déclarées. Sous 1024 px tout repasse pleine largeur : l'élévation
+     est un dispositif de grand écran, elle n'a pas de sens sur un téléphone.
+     Ne garder ici que les largeurs réellement employées : une largeur déclarée
+     et jamais posée laisse croire que le système en compte plus qu'il n'en a. */
+  .v-83 { @apply w-full lg:w-[83.333%]; }
+  .v-91 { @apply w-full lg:w-[91.666%]; }
+  .v-right-72 { @apply w-full lg:ml-auto lg:w-[72%]; }
+
+  /* ---------------------------------------------------------------- réserve */
+  /* Le vide : fente blanche qui entaille un volume, sur toute sa hauteur. */
+  .slot {
+    @apply pointer-events-none absolute top-0 bottom-0 z-10 bg-white;
+    width: var(--rsv);
+  }
+
+  /* Sur fond blanc, la réserve s'inverse : elle devient un plein bleu.
+     C'est elle qui sépare le texte de la photographie dans les hero. */
+  .slot-navy {
+    @apply pointer-events-none absolute top-0 bottom-0 z-10 bg-navy;
+    width: var(--rsv);
+  }
+
+  /* La réserve en accent. Réservée au pied de page, sur l'aplat bleu : c'est un
+     élément non textuel, donc soumis au seuil de 3:1, et l'accent atteint
+     3,19:1 sur #063052. Impossible sur l'ancien #004677, où il tombait à 2,31:1. */
+  .slot-accent {
+    @apply pointer-events-none absolute top-0 bottom-0 z-10 bg-accent;
+    width: var(--rsv);
+  }
+
+  /* Le plein : marqueur bleu sur fond blanc, même largeur que la fente. */
+  .marker {
+    @apply mr-4 inline-block shrink-0 bg-navy align-middle;
+    width: var(--rsv);
+    height: 1.6em;
+  }
+
+  .marker-white { @apply bg-white; }
+  .marker-accent { @apply bg-accent; }
+
+  /* En-tête de section : marqueur + surtitre sur une ligne. */
+  .section-label {
+    @apply flex items-center;
+  }
+
+  /* ---------------------------------------------------------------- typographie */
+  .eyebrow {
+    @apply text-eyebrow uppercase text-navy;
+  }
+
+  .eyebrow-white {
+    @apply text-eyebrow uppercase text-white/75;
+  }
+
+  .lead {
+    @apply max-w-measure text-lead text-ink-soft;
+  }
+
+  .prose-epsim {
+    @apply max-w-measure text-ink-soft;
+  }
+
+  /* Donnée en display : ≥ 38 px, donc l'accent satisfait AA gros texte partout
+     — 4,25:1 sur blanc, 3,92:1 sur le gris des volumes, 3,19:1 sur l'aplat bleu. */
+  .data {
+    @apply block font-display text-data text-accent;
+  }
+
+  /* NE PAS réintroduire de « joint » de réserve sur fond blanc. La réserve est
+     une fente CLAIRE creusée dans un aplat bleu : c'est le vide du logo. Posée
+     sur du blanc elle s'inverse en barre bleue pleine, le motif ne renvoie plus
+     au logo, et elle se lit comme un défaut de mise en page. Les seules
+     inversions admises sont celles qui SÉPARENT deux surfaces — la fente entre
+     le texte et la photographie des hero — jamais un trait flottant sur blanc.
+     Sur fond blanc, les listes se séparent par l'écart, sans filet ni marqueur. */
+
+  /* ---------------------------------------------------------------- boutons */
+  /* Label à 17 px dans une boîte de 60 px. Aucun bouton ne repose sur un
+     contour d'1 px : ce filet est le marqueur le plus sûr d'un dessin de 2015.
+     Le second niveau est un aplat gris plein, pas un fantôme. */
+  /* Lift + ombre au survol, léger tassement au clic : la même logique
+     d'élévation que le système graphique, appliquée au geste. */
+  .btn {
+    @apply inline-flex min-h-[60px] items-center justify-center gap-3 rounded-lg px-9 py-5
+           text-btn transition duration-300 ease-soft
+           hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.98];
+  }
+
+  /* Bleu nuit plein, texte blanc : 13,53:1. L'accent ne peut pas porter de texte
+     d'interface (4,25:1), il n'est donc jamais utilisé en fond de bouton. */
+  .btn-primary { @apply btn bg-navy text-white hover:bg-navy-deep; }
+  /* Second niveau sur fond blanc : aplat gris, sans contour. */
+  .btn-ghost   { @apply btn bg-surface text-navy hover:bg-navy hover:text-white; }
+  /* Sur aplat bleu : plein blanc pour le premier niveau… */
+  .btn-light   { @apply btn bg-white text-navy hover:bg-surface; }
+  /* …et contour franc de 2 px pour le second. Pleine opacité : à 45 % le filet
+     retombait dans le registre du contour fin. */
+  .btn-outline { @apply btn border-2 border-white text-white hover:bg-white hover:text-navy; }
+
+  .link-arrow {
+    @apply inline-flex min-h-[44px] items-center gap-2 text-btn text-navy;
+  }
+
+  /* Soulignement en scaleX plutôt qu'en width : `width` n'est pas une
+     propriété accélérée matériellement, `transform` l'est. Même rendu, geste
+     plus fluide. */
+  .link-arrow-label {
+    @apply relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full
+           after:origin-left after:scale-x-0 after:bg-accent after:transition-transform
+           after:duration-[380ms] after:ease-soft
+           group-hover:after:scale-x-100 group-focus-visible:after:scale-x-100;
+  }
+
+  /* Lien courant : bleu nuit lisible, soulignement d'accent. */
+  .link {
+    @apply text-navy underline decoration-accent decoration-2 underline-offset-4
+           transition-colors duration-300 hover:text-navy-deep;
+  }
+
+  /* ---------------------------------------------------------------- en-tête */
+  /* Par défaut l'en-tête est un aplat bleu : au-dessus du hero, il se confond
+     avec le volume ; au-dessus de la photographie, il reste lisible. Sans
+     JavaScript, c'est cet état qui subsiste — jamais de blanc sur blanc. */
+  /* L'en-tête est un aplat bleu permanent : mince bande de marque au-dessus
+     d'un site blanc. Aucune bascule de couleur, donc aucun risque de blanc sur
+     blanc si le JavaScript ne s'exécute pas. */
+  .site-header {
+    @apply fixed inset-x-0 top-0 z-50 bg-navy transition-shadow duration-300 ease-soft;
+  }
+
+  .site-header .header-link { @apply text-white; }
+  .site-header .logo-color { @apply hidden; }
+  .site-header .logo-white { @apply block; }
+
+  /* Bouton de l'en-tête : aplat blanc plein sur la bande bleue. L'ancien
+     contour à 45 % d'opacité était le filet le plus ténu du site. Il s'inverse
+     en aplat bleu quand l'en-tête passe au blanc au défilement (règle .is-solid). */
+  .header-cta {
+    @apply inline-flex min-h-[48px] items-center justify-center rounded-lg bg-white px-7 py-3
+           text-btn text-navy
+           transition duration-300 ease-soft hover:bg-surface
+           hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.98];
+  }
+
+  /* min-h-[44px] : cible tactile. Le lien ne mesurait que 26 px de haut. */
+  .nav-link {
+    @apply relative inline-flex min-h-[44px] items-center text-sm tracking-[0.01em]
+           transition-colors duration-300 ease-soft
+           after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full
+           after:origin-left after:scale-x-0 after:bg-accent after:transition-transform
+           after:duration-[380ms] after:ease-soft
+           hover:after:scale-x-100 focus-visible:after:scale-x-100;
+  }
+
+  .nav-link[aria-current='page'] { @apply after:scale-x-100; }
+
+  /* ---------------------------------------------------------------- menu mobile */
+  .mobile-menu { @apply fixed inset-0 z-[60] flex flex-col bg-navy lg:hidden; }
+  .mobile-menu[hidden] { display: none; }
+
+  .mobile-menu-link {
+    @apply flex min-h-[60px] items-center border-b border-white/15 font-display
+           text-[1.75rem] leading-none text-white;
+  }
+
+  .mobile-menu-link[aria-current='page'] { @apply text-white; }
+
+  /* Le formulaire de contact a été supprimé : le contact se fait par téléphone,
+     email et adresse. Les classes .field-* qui l'habillaient ont été retirées
+     avec lui — leur contour de champ (#CDD5DC sur blanc, 1,48:1) échouait de
+     toute façon au seuil de 3:1 du critère 1.4.11 sur les composants d'interface. */
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   AMÉLIORATION PROGRESSIVE
+   Règles conditionnées à la classe `.js`, posée sur <html> par un script en
+   ligne du <head>. Sans JavaScript, rien de tout cela ne s'applique : le
+   contenu reste visible et l'en-tête lisible. Écrit dans ce sens — jamais
+   l'inverse — pour qu'une panne de script ne puisse pas vider une page.
+   Hors @layer : Tailwind ne les élimine donc jamais à la compilation.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Au défilement, l'en-tête passe en blanc et le logo reprend ses couleurs. */
+.js .site-header.is-solid { @apply border-b border-line bg-white shadow-sm; }
+.js .site-header.is-solid .header-link { @apply text-navy; }
+.js .site-header.is-solid .logo-color { @apply block; }
+.js .site-header.is-solid .header-cta { @apply bg-navy text-white hover:bg-navy-deep; }
+.js .site-header.is-solid .logo-white { @apply hidden; }
+
+.js .reveal { opacity: 0; }
+.js .reveal.is-visible { @apply animate-fade-up; }
+
+/* Variante sans glissement, pour les grands aplats posés d'un bloc (la boîte
+   de carte, par exemple) : un fade seul, le déplacement de fade-up n'ajoute
+   rien sur une grande surface et peut même distraire. */
+.js .reveal.reveal-flat.is-visible { @apply animate-fade-in; }
+
+/* Chiffres clés (.data) : léger zoom avant, en plus — pas à la place — de
+   l'animation du bloc qui les contient. Se déclenche au même instant que la
+   révélation du parent, sans observation JS séparée. */
+.js .is-visible .data { @apply animate-scale-in; }
+
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .js .reveal,
+  .js .reveal.is-visible {
+    opacity: 1;
+    animation: none !important;
+    transform: none !important;
+  }
+}
