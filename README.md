@@ -12,9 +12,9 @@ l'hébergeur retenu est **Netlify**, dont les coordonnées figurent dans
 
 ## À faire avant la mise en ligne
 
-- [ ] **Remplacer les coordonnées restantes.** Le téléphone est à jour
-      (`01 42 12 04 04`) dans les cinq fichiers HTML. Il reste `[Adresse à
-      compléter]` et `contact@epsim.fr` à rechercher. Le siège social renseigné
+- [ ] **Remplacer l'adresse postale restante.** Le téléphone (`01 42 12 04 04`)
+      et l'email (`contact@epsim.net`) sont à jour dans les cinq fichiers HTML.
+      Il reste `[Adresse à compléter]` à rechercher. Le siège social renseigné
       dans `mentions-legales.html` est le **100 rue de Saussure, 75017 Paris** :
       vérifier que c'est bien aussi l'adresse d'accueil du public avant de la
       reprendre sur la page contact et dans le pied de page.
@@ -22,8 +22,8 @@ l'hébergeur retenu est **Netlify**, dont les coordonnées figurent dans
       `robots.txt` et `sitemap.xml`.
 - [ ] **Fournir les deux visuels manquants** — substitut de carte et image de
       partage. Voir `PHOTOS-A-FOURNIR.md`.
-- [ ] **Compléter le bloc JSON-LD** de `index.html`. L'adresse et le téléphone y
-      sont à jour ; il reste l'email et les **coordonnées GPS**, retirées parce
+- [ ] **Compléter le bloc JSON-LD** de `index.html`. L'adresse, le téléphone et
+      l'email y sont à jour ; il reste les **coordonnées GPS**, retirées parce
       qu'elles pointaient l'Île de la Cité, à trois kilomètres du siège. Un
       commentaire au-dessus du bloc détaille la réserve restante.
 

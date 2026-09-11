@@ -42,20 +42,16 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
-<!-- DONNÉES STRUCTURÉES — deux réserves avant la mise en ligne :
+<!-- DONNÉES STRUCTURÉES — une réserve avant la mise en ligne :
 
-     1. "geo" a été RETIRÉ. Il portait 48.8566 / 2.3522, soit l'Île de la Cité,
-        à plus de trois kilomètres du siège réel. Des coordonnées fausses
-        déplacent silencieusement le cabinet sur les cartes des moteurs : mieux
-        vaut aucune coordonnée qu'une mauvaise. Relever les coordonnées exactes
-        du 100 rue de Saussure et rétablir le bloc :
-            "geo": { "@type": "GeoCoordinates", "latitude": …, "longitude": … },
+     "geo" a été RETIRÉ. Il portait 48.8566 / 2.3522, soit l'Île de la Cité,
+     à plus de trois kilomètres du siège réel. Des coordonnées fausses
+     déplacent silencieusement le cabinet sur les cartes des moteurs : mieux
+     vaut aucune coordonnée qu'une mauvaise. Relever les coordonnées exactes
+     du 100 rue de Saussure et rétablir le bloc :
+         "geo": { "@type": "GeoCoordinates", "latitude": …, "longitude": … },
 
-     2. "telephone" est désormais le vrai numéro du cabinet. "email" ci-dessous
-        reste une valeur d'attente, à remplacer en même temps que les XXX
-        correspondants de mentions-legales.html. Publier une adresse fictive
-        dans des données structurées est pire que ne rien publier : la
-        supprimer si la vraie n'est pas connue au moment de la mise en ligne. -->
+     "telephone" et "email" sont désormais les vraies coordonnées du cabinet. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -68,7 +64,7 @@
   "logo": "https://www.epsim.fr/assets/img/logo-epsim.svg",
   "vatID": "FR92493604250",
   "telephone": "+33142120404",
-  "email": "contact@epsim.fr",
+  "email": "contact@epsim.net",
   "priceRange": "$$$",
   "address": {
     "@type": "PostalAddress",
@@ -375,8 +371,7 @@
           </li>
           <li class="flex gap-3">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mt-0.5 shrink-0 text-white/55" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg>
-            <!-- À COMPLÉTER : adresse email -->
-            <a href="mailto:contact@epsim.fr" class="inline-flex min-h-[44px] items-center hover:text-white">contact@epsim.fr</a>
+            <a href="mailto:contact@epsim.net" class="inline-flex min-h-[44px] items-center hover:text-white">contact@epsim.net</a>
           </li>
         </ul>
       </div>
